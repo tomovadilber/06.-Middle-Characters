@@ -1,0 +1,55 @@
+using System;
+using System.Linq;
+using System.Numerics;
+
+namespace Array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string a = (Console.ReadLine());
+
+            int length = 0;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                length++;
+            }
+
+            if (length % 2 == 0)
+            {
+                length /= 2;
+
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (i == length -1)
+                    {
+                        Console.Write(a[i]);
+                    }
+
+                    if (i == length)
+                    {
+                        Console.Write(a[i]);
+                    }
+                }
+
+                
+            }
+
+            else
+            {
+                length -= 1;
+                length /= 2;
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (i == length)
+                    {
+                        Console.Write(a[i]);
+                    }
+                }
+            }
+        }
+    }
+}
